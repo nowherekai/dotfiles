@@ -1,0 +1,10 @@
+[user]
+    name = nowherekai
+	email = kailaichao@163.com
+[color]
+	ui = true
+[core]
+	editor = vim
+	excludesfile = /home/klc/.gitignore
+[merge]
+	tool = vimdiff
