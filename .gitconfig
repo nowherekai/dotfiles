@@ -1,6 +1,6 @@
 [user]
     name = nowherekai
-	email = kailaichao@163.com
+    email = kailaichao@163.com
 [color]
 	ui = true
 [core]
@@ -8,3 +8,8 @@
 	excludesfile = /home/klc/.gitignore
 [merge]
 	tool = vimdiff
+[alias]
+  st = status
+  co = checkout
+  ci = commit -v
+  br = branch
