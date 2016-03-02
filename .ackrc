@@ -1,0 +1,3 @@
+--ignore-dir=log
+--ignore-dir=test
+--ignore-file=is:tag
