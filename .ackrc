@@ -1,4 +1,6 @@
 --ignore-dir=log
 --ignore-dir=test
+--ignore-dir=tmp
 --ignore-file=is:tag
 --ignore-file=is:tags
+--ignore-file=is:schema.rb
