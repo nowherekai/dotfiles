@@ -54,7 +54,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/heroku/bin:/usr/lib/jvm/java-6-openjdk-i386/bin:/usr/lib/jvm/java-6-openjdk-i386/jre/bin:/opt/jdk1.7.0_25/bin:/opt/jdk1.7.0_25/jre/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/bin:/opt/android-sdk-linux/platform-tools:/opt/android-sdk-linux/tools:/home/klc/.rvm/bin"
+export PATH="/usr/local/heroku/bin:/usr/lib/jvm/java-6-openjdk-i386/bin:/usr/lib/jvm/java-6-openjdk-i386/jre/bin:/opt/jdk1.7.0_25/bin:/opt/jdk1.7.0_25/jre/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -102,3 +102,4 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+eval "$(rbenv init -)"
