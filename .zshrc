@@ -6,8 +6,18 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="agnoster"
+POWERLEVEL9K_MODE='nerdfont-complete'
+ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="agnoster"
 DEFAULT_USER="$USER"
+# Customise the Powerlevel9k prompts
+# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+# POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir newline vcs status)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
+POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-untracked git-aheadbehind git-remotebranch)
+# POWERLEVEL9K_VCS_GIT_HOOKS=()
+
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -48,7 +58,8 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git rails ruby tmux autojump rvm history rake bunlder)
-plugins=(git rails ruby tmux autojump rvm history bunlder)
+plugins=(git rails ruby tmux autojump rvm history bunlder zsh-completions zsh-autosuggestions)
+autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,7 +106,11 @@ alias -s gz='tar -xzvf'
 alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
-alias emacs='emacs -nw'
+alias emacs='/usr/local/bin/emacs -nw'
+# alias tags='ripper-tags -R --exclude=vendor'
+alias tags='ripper-tags -R --exclude=vendor && ctags -R -a app/models/concerns/*'
+alias cat='bat'
+alias gcod='git checkout develop'
 
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
@@ -103,3 +118,14 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 eval "$(rbenv init -)"
+export zoomApiKey="uLMJywMLSY6KfydimN636A"
+export zoomApiSecret="0dNLSR6nyofm8a4nz2Fn8VzjHkXca9XmT9RA"
+export courseware_app_id="bba9cb470f554c750e99"
+export courseware_app_secret="a4b37a8e5edc5e2920f4eb44b689eb494895f38c"
+export encryption_key="27e3b0833d3ca1b2928501956f6ecdc6"
+export zendesk_shared_secret="opRdgQxbvDGJdB9Z9xjr5Exq3vTa7GtznKMXQuO9zHMb7Jae"
+export zendesk_subdomain="alo7test"
+export zendesk_faq_url='https://alo7test.zendesk.com/hc/en-us'
+export zendesk_faq_request_url='https://alo7test.zendesk.com/hc/en-us/requests/new'
+export iyy_app_id="ici2s86v"
+export iyy_app_secret="makiesk0bc1ve6taigzlemkbx087oysl"
