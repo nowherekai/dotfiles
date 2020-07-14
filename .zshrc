@@ -65,7 +65,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/heroku/bin:/usr/lib/jvm/java-6-openjdk-i386/bin:/usr/lib/jvm/java-6-openjdk-i386/jre/bin:/opt/jdk1.7.0_25/bin:/opt/jdk1.7.0_25/jre/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/bin"
+# export PATH="/usr/local/heroku/bin:/usr/lib/jvm/java-6-openjdk-i386/bin:/usr/lib/jvm/java-6-openjdk-i386/jre/bin:/opt/jdk1.7.0_25/bin:/opt/jdk1.7.0_25/jre/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/bin"
+export PATH="/usr/local/heroku/bin:/usr/lib/jvm/java-6-openjdk-i386/bin:/usr/lib/jvm/java-6-openjdk-i386/jre/bin:/opt/jdk1.7.0_25/bin:/opt/jdk1.7.0_25/jre/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/bin:/opt/android-sdk-linux/platform-tools:/opt/android-sdk-linux/tools:/home/klc/.rvm/bin:/usr/local/go/bin:$HOME/go/bin:$HOME/.cargo/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -116,8 +117,10 @@ alias gcod='git checkout develop'
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+
+export LC_ALL=en_US.UTF-8
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-eval "$(rbenv init -)"
 export zoomApiKey="uLMJywMLSY6KfydimN636A"
 export zoomApiSecret="0dNLSR6nyofm8a4nz2Fn8VzjHkXca9XmT9RA"
 export courseware_app_id="bba9cb470f554c750e99"
@@ -129,3 +132,11 @@ export zendesk_faq_url='https://alo7test.zendesk.com/hc/en-us'
 export zendesk_faq_request_url='https://alo7test.zendesk.com/hc/en-us/requests/new'
 export iyy_app_id="ici2s86v"
 export iyy_app_secret="makiesk0bc1ve6taigzlemkbx087oysl"
+export APOLLO_META=""
+export PATH=$PATH:/usr/local/opt/rabbitmq/sbin
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"

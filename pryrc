@@ -6,7 +6,7 @@
 pryrc_start_time = Time.now
 
 require '~/.pryrc-helpers'
-require 'rb-readline'
+# require 'rb-readline'
 
 # ___ is to Avoid name conflict
 ___ = PryrcHelpers
@@ -15,7 +15,8 @@ ___ = PryrcHelpers
 ___daily_gems  = %w[benchmark yaml sqlite3]
 
 # ___pry_gems is for loading vendor plugins for Pry.
-___pry_gems = %w[awesome_print hirb sketches debugger pry-debugger pry-stack_explorer]
+# ___pry_gems = %w[awesome_print hirb sketches debugger pry-debugger pry-stack_explorer]
+___pry_gems = %w[awesome_print hirb sketches pry-stack_explorer]
 
 ___daily_gems.___require_gems
 ___pry_gems.___require_gems
