@@ -63,7 +63,7 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git rails ruby tmux autojump rvm history rake bunlder)
-plugins=(git rails ruby tmux autojump rvm history bunlder zsh-completions zsh-autosuggestions)
+plugins=(evalcache git rails ruby tmux autojump rvm history bunlder zsh-completions zsh-autosuggestions zsh-nvm)
 autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
@@ -140,11 +140,14 @@ export iyy_app_secret="makiesk0bc1ve6taigzlemkbx087oysl"
 export APOLLO_META=""
 export PATH=$PATH:/usr/local/opt/rabbitmq/sbin
 
+export NVM_LAZY_LOAD=true
+export NVM_COMPLETION=true
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+# eval "$(jenv init -)"
+_evalcache jenv init -
 
 
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
